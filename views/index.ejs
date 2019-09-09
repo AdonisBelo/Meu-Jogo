@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Atomoids_Index</title>
+        <link rel="stylesheet" href="stylesheets/style.css">
+    </head>
+
+    <style>
+
+      img{
+        position: absolute;
+        top: 46%;
+        left: 50%;
+        border: 0px;
+        color: white;
+        transform: translate(-50%, -50%); /*Para centralizar levando em conta o tamanho da tabela*/
+        /*https://css-tricks.com/quick-css-trick-how-to-center-an-object-exactly-in-the-center/*/
+        z-index: 2;
+        max-width:200px;
+        max-height:150px;
+        width: auto;
+        height: auto;
+      }
+
+    </style>
+
+    <body>
+
+      <canvas height="600" width="1000" id="mycanvas">O seu browser não suporta canvas</canvas>
+
+      <script>
+
+          window.onkeydown = keyPressed;
+          function keyPressed(event){
+          	  switch(event.keyCode){
+      	         case 32:
+                    window.location.replace("/game");
+  	             break;
+  	           }
+  	      }
+
+          function goToRankingPage(){
+              window.location.replace("/ranking");
+          }
+
+          function goToHelpPage(){
+              window.location.replace("/help");
+          }
+
+      </script>
+
+      <script type="text/javascript" src="javascripts/classes/Screen.js"></script>
+
+      <script>
+
+        function start(){
+          var scr = new Screen(canvas.width, canvas.height);
+          scr.drawScreen(ctx);
+        }
+
+        var canvas = document.getElementById("mycanvas");
+        var ctx = canvas.getContext("2d");
+
+        start();
+
+      </script>
+
+      <table style="top: 20%;">
+        <tr><td style="font-size: 100px;">ATOMOIDS</td></tr>
+
+      </table>
+
+      <img src="images/atomoids_logo.png"> 
+
+      <table style="top: 64%;">
+        <tr><td><%= message %></td></tr>
+      </table>
+
+      <table style="top: 70%;">
+        <tr><td style="font-size: 25px;">APERTE ESPAÇO PARA JOGAR</td></tr>
+      </table>
+
+      <table style="top: 78%;">
+        <tr><td><input type="button" style="font-size: 150%;" value="    Ranking    " onclick="goToRankingPage()"></td></tr>
+      </table>
+
+      <table style="top: 86%;">
+        <tr><td><input type="button" style="font-size: 150%;" value="   Como jogar  " onclick="goToHelpPage()"></td></tr>
+      </table>
+
+      <table style="top: 93%;">
+        <tr><td style="color: grey; font-size: 10px; font-family: HyperItalic;">Por Adônis Belo e Daniel Rosa</td></tr>
+      </table>
+
+    </body>
+</html>

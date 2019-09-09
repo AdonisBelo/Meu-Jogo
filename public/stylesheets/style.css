@@ -1,0 +1,53 @@
+
+@font-face {
+  font-family: Hyper;
+  src: url("./_fonts/Hyperspace Bold.otf");
+}
+
+@font-face {
+  font-family: HyperItalic;
+  src: url("./_fonts/Hyperspace Italic.otf");
+}
+
+@font-face {
+  font-family: ArialBold;
+  src: url("./_fonts/arialbd.ttf");
+}
+
+canvas {
+    position: absolute;
+    background-color: #101010;
+    width:  70%;
+    height: 90%;
+    top: 5%;
+    left: 15%;
+    margin: 0px;
+    z-index: 1; /*https://developer.mozilla.org/pt-BR/docs/Web/CSS/z-index?v=control*/
+}
+
+body {
+    font-family: Hyper;
+    background-color: #101010;
+}
+
+table {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 0px;
+    color: white;
+    transform: translate(-50%, -50%); /*Para centralizar levando em conta o tamanho da tabela*/
+    /*https://css-tricks.com/quick-css-trick-how-to-center-an-object-exactly-in-the-center/*/
+    z-index: 2;
+}
+
+input {
+    font-family: Hyper;
+    color: white;
+    background-color: #101010;
+}
+
+tr, td {
+    border: 0px;
+    text-align: center;
+}

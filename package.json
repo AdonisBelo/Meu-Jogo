@@ -1,0 +1,29 @@
+{
+  "name": "atomoids",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.17.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "ejs": "^2.5.6",
+    "express": "~4.15.2",
+    "morgan": "~1.8.1",
+    "sat": "^0.6.0",
+    "serve-favicon": "~2.4.2"
+  },
+  "description": "A Game",
+  "main": "app.js",
+  "author": "Adônis França Belo & Daniel Carneiro Rosa",
+  "license": "ISC",
+  "devDependencies": {
+    "jasmine": "^2.8.0",
+    "jasmine-core": "^2.8.0",
+    "karma": "^1.7.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.0"
+  }
+}
